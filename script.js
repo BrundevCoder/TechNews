@@ -1,26 +1,32 @@
 const cardsContainer = document.getElementById("news");
 
-const apiUrl = "http://127.0.0.1:5000/news";
+const apiUrl = "https://technews-pg2q.onrender.com/news";
 
 async function getNews() {
-    const response = await fetch(apiUrl);
-    if (!response.ok) {
-        alert("Probably Out of credits rn, Sorry! Come back next day :(")
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok || response.length === 0) {
+            alert("Probably Out of credits rn, Sorry! Come back next day :(");
+            return;
+        }
+
+        const result = await response.json();
+
+        const newsLen = result["results"].length;
+
+        for (let i = 0; i < newsLen; i++) {
+            const newData = result["results"][i];
+            
+            const url = newData.href;
+            const author = newData.author.name;
+            const title = newData.title;
+            const img = newData.image;
+
+            addNewsToUI(url, author, title, img)
+        }
     }
-
-    const result = await response.json();
-
-    const newsLen = result["results"].length;
-
-    for (let i = 0; i < newsLen; i++) {
-        const newData = result["results"][i];
-        
-        const url = newData.href;
-        const author = newData.author.name;
-        const title = newData.title;
-        const img = newData.image;
-
-        addNewsToUI(url, author, title, img)
+    catch (error) {
+        alert("Probably Out of credits rn, Sorry! Come back next day :(")
     }
 }
 
