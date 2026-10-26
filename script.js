@@ -4,6 +4,9 @@ const apiUrl = "http://127.0.0.1:5000/news";
 
 async function getNews() {
     const response = await fetch(apiUrl);
+    if (!response.ok) {
+        alert("Probably Out of credits rn, Sorry! Come back next day :(")
+    }
 
     const result = await response.json();
 

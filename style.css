@@ -55,6 +55,10 @@ header nav ul {
     font-family: "Raleway", Arial, sans-serif;
 }
 
+main {
+    min-height: 100vh;
+}
+
 .grid-container {
     padding: 1rem;
     display: grid;
@@ -114,4 +118,19 @@ header nav ul {
     transform: scale(0.95);
     box-shadow: 0 1px 0 #255aa9,
                 0 3px 5px #476af4;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+    background: #4688eb;
+    color: #fff;
+    font-family: "Raleway", Arial, sans-serif;
+    font-weight: 700;
+}
+
+.footer a {
+    color: #fff;
 }
