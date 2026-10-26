@@ -14,7 +14,7 @@ api_key = os.getenv("news_api_key")
 def get_news():
 
     api_response = requests.get(
-        "https://api.apitube.io/v1/news/everything?language.code=en&per_page=1&title=tech",
+        "https://api.apitube.io/v1/news/everything?language.code=en&per_page=10&title=tech",
         headers={"X-API-Key": api_key},
     )
 

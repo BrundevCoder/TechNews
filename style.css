@@ -42,8 +42,76 @@ header nav ul {
     text-decoration: none;
     color: #000;
     font-weight: 600;
+    font-size: 17px;
 }
 
 .link:hover {
     text-decoration: underline;
+}
+
+.title {
+    margin: 1rem;
+    margin-left: .9rem;
+    font-family: "Raleway", Arial, sans-serif;
+}
+
+.grid-container {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 15px;
+}
+
+.news-card {
+    background: #4688eb;
+    font-family: "Raleway", Arial, sans-serif;
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    border-radius: 8px;
+}
+
+.news-card img {
+    border-start-end-radius: 8px;
+    border-start-start-radius: 8px;
+    aspect-ratio: 16/8;
+    width: 100%;
+}
+
+.details {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.news-title {
+    text-align: center;
+    font-size: 27px;
+}
+
+.visit-button {
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+    background: #3c7cdd;
+    border: 2px solid #255aa9;
+    padding: .85rem 1.85rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 0 #255aa9,
+                0 5px 5px #476af4;
+}
+
+.visit-button:hover {
+    transform: scale(1.05);
+}
+
+.visit-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 1px 0 #255aa9,
+                0 3px 5px #476af4;
 }
