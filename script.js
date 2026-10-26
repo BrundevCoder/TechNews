@@ -34,7 +34,7 @@ function addNewsToUI(url, author, title, img) {
     cardsContainer.innerHTML += `
         <div class="news-card">
             <img src="${img}" alt="News Image">
-            <h3 class="news-title">${title}}</h3>
+            <h3 class="news-title">${title}</h3>
             <div class="details">
                 <p>Author: ${author !== '' ? author : "Unknown"}</p>
             </div>
