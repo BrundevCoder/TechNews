@@ -4,6 +4,8 @@ TechNews is a website where you can find the most recent news about tech!
 
 You can try it [here](https://brundevcoder.github.io/TechNews/)
 
+Also... the API can take up to 20sec to show something if it isn't use for a time.
+
 ## How does it work?
 So... I created a backend because I don't want my API key to get leaked :D ... But the Python trys to get a response from a API called **apitube**, so then the JavaScript can get a responde from it with everything, then it checks for all the news and shows to you.
 
